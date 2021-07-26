@@ -1,0 +1,48 @@
+
+.box{
+    background: #eee;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+textarea{
+    width: 100%;
+    border-radius: 5px;
+    resize: none;
+    font-size:1em;
+    height: 100px;
+    padding: 5px;
+}
+
+label{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.btn-success{
+    background: #4CAF50;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    padding: 15px;
+}
+
+.btn-danger{
+    background:red;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    padding: 5px 10px;
+}
+
+ #divTasks > div{
+    border: 1px solid #aaa;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    min-height: 50px;
+ }
+ .divButton{
+     text-align: right;
+ }
