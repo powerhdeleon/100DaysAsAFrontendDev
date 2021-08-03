@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='main.js'></script>
+</head>
+<body>
+
+    <div>
+        <label>Descripción</label>
+        <input type="text" id="txtDescription">
+        <label>Total</label>
+        <input type="number" id="txtAmount">
+        <button onclick="add()">Agregar</button>
+    </div>
+
+    <div id="list"></div>
+    <div>
+        <label>Total: </label>
+        <span id="spnTotal">0</span>
+    </div>
+    <div>
+        <label>Cantidad:</label>
+        <span id="spnCount"></span>
+    </div>
+
+    <script>
+        let itemsSubject = new ItemSubject();
+        let listObserver = new ListObserver(
+            document.getElementById("list")
+        );
+        let totalObserver = new TotalObserver(
+            document.getElementById("spnTotal")
+        );
+        let dynamicObserver = new DynamicObserver(
+            document.getElementById("spnCount"),
+            (subject, tag) => {
+                tag.innerHTML = subject.items.length;
+            }
+        )
+
+        itemsSubject.subscribe(listObserver);
+        itemsSubject.subscribe(totalObserver);
+        itemsSubject.subscribe(dynamicObserver);
+
+      
+        function add() {
+            let description =
+                document.getElementById("txtDescription").value;
+            let amount =
+                document.getElementById("txtAmount").value;
+
+            itemsSubject.notify({
+                description: description,
+                amount: amount
+            });
+        }
+    </script>
+
+</body>
+</html>
