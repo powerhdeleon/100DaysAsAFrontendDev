@@ -1,0 +1,47 @@
+:root{
+    --number: 1;
+}
+
+.square{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: black;
+    color: white;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.square::after{
+    counter-reset: number var(--number);
+    content: counter(number);
+}
+
+.delay1{
+    animation-delay: 1s;
+    --number: 2;
+}
+
+.delay2{
+    animation-delay: 2s;
+    --number: 3;
+}
+
+@keyframes move {
+    0%{
+        top: 0px; left:0px;
+    }
+    25%{
+        top: 0px; left: 97%;
+    }
+    50%{
+        top: 96%; left: 97%;
+    }
+    75%{
+        top: 96%; left: 0px;
+    }
+    100%{
+        top: 0px; left:0px;
+    }
+}
