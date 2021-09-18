@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+
+    <div class="form">
+        <form>
+            <label>Cantidad</label>
+            <input value="2" type="number" id="quantity">
+            <label>Producto</label>
+            <input value="Cerveza" type="text" id="product">
+            <label>Precio</label>
+            <input value="20" type="number" id="price">
+        
+            <button type="button" onclick="add1()">+ Agregar 1</button>
+            <button type="button" onclick="add2()">+ Agregar 2</button>
+            <button type="button" onclick="add3()">+ Agregar 3</button>
+        </form>
+    </div>
+
+    <div id="list"></div>
+
+    <template id="templateProduct">
+        <div>
+            <p>
+                <span></span> <b></b>
+            </p>
+        </div>
+    </template>
+
+</body>
+
+</html>
