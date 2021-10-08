@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+  
+    <div class="wrapper">
+        <div>
+            <app-list 
+                data-title="Lista de usuarios"
+                data-url="https://jsonplaceholder.typicode.com/users"    
+                data-field="name"
+                
+            >
+            </app-list>
+
+        </div>
+        <div>
+            <app-list 
+            data-title="Lista de usuarios"
+            data-url="https://jsonplaceholder.typicode.com/albums/1/photos"    
+            data-field="thumbnailUrl"
+            modePicture="true"
+        >
+        </div>
+        
+    </div>
+  
+ 
+</body>
+</html>
